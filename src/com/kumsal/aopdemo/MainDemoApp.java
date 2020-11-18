@@ -7,13 +7,14 @@ import com.kumsal.aopdemo.doa.AccountDAO;
 public class MainDemoApp {
 
 	public static void main(String[] args) {
-		AnnotationConfigApplicationContext x=new AnnotationConfigApplicationContext(DemoConfig.class);
+		AnnotationConfigApplicationContext context = 
+				   new AnnotationConfigApplicationContext(DemoConfig.class);
 		
-		AccountDAO theAccountDao=x.getBean("accountDAO", AccountDAO.class);
+		AccountDAO theAccountDao=context.getBean("accountDAO", AccountDAO.class);
 		
 		theAccountDao.addAccount();
 		
-		x.close();
+		context.close();
 
 	}
 
