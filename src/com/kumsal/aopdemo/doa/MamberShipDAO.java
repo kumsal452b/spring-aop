@@ -4,7 +4,8 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class MamberShipDAO {
-	public void addAccount(){
+	public String addAccount(){
 		System.out.println(getClass()+" :DOING STUFF:");
+		return "a";
 	}
 }
