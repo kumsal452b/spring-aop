@@ -9,6 +9,6 @@ public class MamberShipDAO {
 		return "a";
 	}
 	public void goToSleep(){
-		
+		System.out.println("Goto sleep");
 	}
 }
