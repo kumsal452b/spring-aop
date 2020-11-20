@@ -8,4 +8,7 @@ public class MamberShipDAO {
 		System.out.println(getClass()+" :DOING STUFF:");
 		return "a";
 	}
+	public void goToSleep(){
+		
+	}
 }
