@@ -14,8 +14,8 @@ public class MainDemoApp {
 		AccountDAO theAccountDao=context.getBean("accountDAO", AccountDAO.class);
 		
 		MamberShipDAO theMemberShipDAO=context.getBean("mamberShipDAO",MamberShipDAO.class);
-		
-		theAccountDao.addAccount();
+		Account myAccount=new Account();
+		theAccountDao.addAccount(myAccount);
 		
 		theMemberShipDAO.addAccount();
 		context.close();
