@@ -25,12 +25,17 @@ public class MyDemoLoginAspect {
 	private void Setter(){
 		
 	}
-	@Before("forDaoPacket()")
+	
+	@Pointcut("forDaoPacket() && !(getter() || setter())")
+	public void forDaoPackacgeNoSetterAndGetter(){
+		
+	}
+	@Before("forDaoPackacgeNoSetterAndGetter()")
 	public void beforeAddAccountAdvice(){
 		System.out.println("=======> Executing @Before advice on addAccount()");
 	}
 	
-	@Before("forDaoPacket()")
+	@Before("forDaoPackacgeNoSetterAndGetter()")
 	public void performApiAnalitycs(){
 		System.out.println("Performing api");
 	}
