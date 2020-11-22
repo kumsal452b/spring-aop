@@ -24,15 +24,16 @@ public class AccountDAO {
 		return name;
 	}
 	public void setName(String name) {
-		System.out.println(getClass()+" :set name doing work");
+		System.out.println(getClass()+" :setname doing work");
 		this.name = name;
 	}
 	public String getServiceCode() {
-		System.out.println(getClass()+" serive gt:doing work");
+		System.out.println(getClass()+" getservice gt:doing work");
 		return serviceCode;
 	}
 	public void setServiceCode(String serviceCode) {
 		this.serviceCode = serviceCode;
+		System.out.println(getClass()+" setservice gt:doing work");
 	}
 	
 }
