@@ -20,12 +20,15 @@ public class AccountDAO {
 		return false;
 	}
 	public String getName() {
+		System.out.println(getClass()+" : getname doing work");
 		return name;
 	}
 	public void setName(String name) {
+		System.out.println(getClass()+" :set name doing work");
 		this.name = name;
 	}
 	public String getServiceCode() {
+		System.out.println(getClass()+" serive gt:doing work");
 		return serviceCode;
 	}
 	public void setServiceCode(String serviceCode) {

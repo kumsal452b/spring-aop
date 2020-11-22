@@ -17,6 +17,9 @@ public class MainDemoApp {
 		Account myAccount=new Account();
 		theAccountDao.addAccount(myAccount,true);
 		theAccountDao.doWork();
+		theAccountDao.setName("foobar");
+		theAccountDao.setServiceCode("silver");
+		
 		theMemberShipDAO.addAccount();
 		theMemberShipDAO.addAccount();
 		context.close();
