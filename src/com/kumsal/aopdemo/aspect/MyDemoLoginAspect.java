@@ -22,7 +22,7 @@ public class MyDemoLoginAspect {
 	}
 	
 	@Pointcut("execution(* com.kumsal.aopdemo.doa.*.set*( ..))")
-	private void Setter(){
+	private void setter(){
 		
 	}
 	
