@@ -7,17 +7,17 @@ import org.springframework.stereotype.Component;
 @Aspect
 public class LuvAopExpressions {
 	@Pointcut("execution(* com.kumsal.aopdemo.doa.*.*( ..))")
-	private void forDaoPacket(){
+	public void forDaoPacket(){
 		
 	}
 	
 	@Pointcut("execution(* com.kumsal.aopdemo.doa.*.get*( ..))")
-	private void getter(){
+	public void getter(){
 		
 	}
 	
 	@Pointcut("execution(* com.kumsal.aopdemo.doa.*.set*( ..))")
-	private void setter(){
+	public void setter(){
 		
 	}
 	
