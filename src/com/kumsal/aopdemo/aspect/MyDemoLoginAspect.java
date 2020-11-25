@@ -36,8 +36,4 @@ public class MyDemoLoginAspect {
 	}
 	
 
-	@Before("forDaoPackacgeNoSetterAndGetter()")
-	public void logToCloudAsync(){
-		System.out.println("logToCloudAsync");
-	}
 }
