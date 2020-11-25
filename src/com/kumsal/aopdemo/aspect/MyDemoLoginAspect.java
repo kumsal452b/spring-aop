@@ -35,11 +35,7 @@ public class MyDemoLoginAspect {
 		System.out.println("=======> Executing @Before advice on addAccount()");
 	}
 	
-	@Before("forDaoPackacgeNoSetterAndGetter()")
-	public void performApiAnalitycs(){
-		System.out.println("Performing api");
-	}
-	
+
 	@Before("forDaoPackacgeNoSetterAndGetter()")
 	public void logToCloudAsync(){
 		System.out.println("logToCloudAsync");
