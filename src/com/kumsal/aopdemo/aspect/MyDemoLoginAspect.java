@@ -11,26 +11,26 @@ import jdk.nashorn.internal.objects.annotations.Setter;
 @Component
 public class MyDemoLoginAspect {
 
-	@Pointcut("execution(* com.kumsal.aopdemo.doa.*.*( ..))")
-	private void forDaoPacket(){
-		
-	}
-	
-	@Pointcut("execution(* com.kumsal.aopdemo.doa.*.get*( ..))")
-	private void getter(){
-		
-	}
-	
-	@Pointcut("execution(* com.kumsal.aopdemo.doa.*.set*( ..))")
-	private void setter(){
-		
-	}
-	
-	@Pointcut("forDaoPacket() && !(getter() || setter())")
-	public void forDaoPackacgeNoSetterAndGetter(){
-		
-	}
-	@Before("forDaoPackacgeNoSetterAndGetter()")
+//	@Pointcut("execution(* com.kumsal.aopdemo.doa.*.*( ..))")
+//	private void forDaoPacket(){
+//		
+//	}
+//	
+//	@Pointcut("execution(* com.kumsal.aopdemo.doa.*.get*( ..))")
+//	private void getter(){
+//		
+//	}
+//	
+//	@Pointcut("execution(* com.kumsal.aopdemo.doa.*.set*( ..))")
+//	private void setter(){
+//		
+//	}
+//	
+//	@Pointcut("forDaoPacket() && !(getter() || setter())")
+//	public void forDaoPackacgeNoSetterAndGetter(){
+//		
+//	}
+	@Before("com.kumsal.aopdemo.aspect.LuvAopExpressions.forDaoPackacgeNoSetterAndGetter()")
 	public void beforeAddAccountAdvice(){
 		System.out.println("=======> Executing @Before advice on addAccount()");
 	}

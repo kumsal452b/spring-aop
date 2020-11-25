@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Aspect
 @Component
 public class MyAnalyticsAspect {
-	@Before("forDaoPackacgeNoSetterAndGetter()")
+	@Before("com.kumsal.aopdemo.aspect.LuvAopExpressions.forDaoPackacgeNoSetterAndGetter()")
 	public void performApiAnalitycs(){
 		System.out.println("Performing api");
 	}
