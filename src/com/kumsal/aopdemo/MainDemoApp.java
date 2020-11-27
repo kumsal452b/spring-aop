@@ -1,5 +1,7 @@
 package com.kumsal.aopdemo;
 
+import java.util.Scanner;
+
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.kumsal.aopdemo.doa.AccountDAO;
@@ -23,6 +25,22 @@ public class MainDemoApp {
 		theMemberShipDAO.addAccount();
 		theMemberShipDAO.addAccount();
 		context.close();
+		Scanner neScanner=new Scanner(System.in);
+		
+		Double value;
+		value = neScanner.nextDouble();
+		Double girilenDeger=0.0;
+		int toplam=0;
+		while (true) {
+//			System.out.println(girilenDeger);
+			System.out.println(toplam);
+			girilenDeger=neScanner.nextDouble();
+//			girilenDeger-=value;
+			toplam+=girilenDeger;
+		}
+		
+		
+		
 
 	}
 

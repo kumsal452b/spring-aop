@@ -12,6 +12,8 @@ public class MyAnalyticsAspect {
 	@Before("com.kumsal.aopdemo.aspect.LuvAopExpressions.forDaoPackacgeNoSetterAndGetter()")
 	public void performApiAnalitycs(){
 		System.out.println("Performing api");
+		MyAnalyticsAspect s1=new MyAnalyticsAspect(),s2=new MyAnalyticsAspect();
+		
 	}
 	
 }
