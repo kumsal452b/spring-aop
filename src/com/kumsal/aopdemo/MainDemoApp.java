@@ -17,6 +17,10 @@ public class MainDemoApp {
 		
 		MamberShipDAO theMemberShipDAO=context.getBean("mamberShipDAO",MamberShipDAO.class);
 		Account myAccount=new Account();
+		
+		myAccount.setName("Kumsal");
+		myAccount.setLevel("Platinium");
+		
 		theAccountDao.addAccount(myAccount,true);
 		theAccountDao.doWork();
 		theAccountDao.setName("foobar");
@@ -25,11 +29,6 @@ public class MainDemoApp {
 		theMemberShipDAO.addAccount();
 		theMemberShipDAO.addAccount();
 		context.close();
-		
-		
-		
-		
-
 	}
 
 }
