@@ -2,7 +2,6 @@ package com.kumsal.aopdemo.aspect;
 
 import java.util.List;
 
-import org.aopalliance.intercept.Joinpoint;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
@@ -21,12 +20,16 @@ import jdk.nashorn.internal.objects.annotations.Setter;
 @Order(2)
 public class MyDemoLoginAspect {
 	
-	@AfterReturning(pointcut="* com.kumsal.aopdemo.doa.findAccounts(..)",returning="result")
+	@AfterReturning(pointcut="execution(* com.kumsal.aopdemo.doa.findAccounts(..))",returning="result")
 	public void afterReturningFindAccountService(
-			Joinpoint thePoint,
+			JoinPoint thePoint,
 			List<Account> result
 			){
+		String method=thePoint.getSignature().toShortString();
 		
+		System.out.println("method =====> executing after run method "+method);
+		
+		System.out.println("Result is===> " +result);
 		
 	}
 
