@@ -39,6 +39,7 @@ public class MyDemoLoginAspect {
 		for (Account account : result) {
 			String upperName=account.getName().toUpperCase();
 			
+			account.setName(upperName);
 		}
 		
 	}
@@ -61,6 +62,7 @@ public class MyDemoLoginAspect {
 				System.out.println("Account name :"+theaccount.getLevel());
 			}
 		}
+		
 	}
 	
 
