@@ -15,6 +15,11 @@ public class AccountDAO {
 	
 	public List<Account> findAcounts(){
 		List<Account> theAccounts=new ArrayList<Account>();
+		Account temp1=new Account("Kumsal", "Silver");
+		Account temp2=new Account("Yahya", "Platinium");
+
+		theAccounts.add(temp2);
+		theAccounts.add(temp1);
 		return theAccounts;
 	}
 	
