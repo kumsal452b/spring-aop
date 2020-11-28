@@ -36,7 +36,10 @@ public class MyDemoLoginAspect {
 	}
 
 	private void convertAccountNamesToUpperCase(List<Account> result) {
-		
+		for (Account account : result) {
+			String upperName=account.getName().toUpperCase();
+			
+		}
 		
 	}
 
