@@ -46,9 +46,6 @@ public class AccountDAO {
 		System.out.println(getClass()+" setservice gt:doing work");
 	}
 
-	@Override
-	public String toString() {
-		return "AccountDAO [name=" + name + ", serviceCode=" + serviceCode + "]";
-	}
+
 	
 }
