@@ -3,6 +3,16 @@ package com.kumsal.aopdemo;
 public class Account {
 	private String name;
 	private String level;
+	public Account() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Account(String name, String level) {
+		super();
+		this.name = name;
+		this.level = level;
+	}
+
 	public String getName() {
 		return name;
 	}
