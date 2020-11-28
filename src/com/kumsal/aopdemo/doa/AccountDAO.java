@@ -1,5 +1,8 @@
 package com.kumsal.aopdemo.doa;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.stereotype.Component;
 
 import com.kumsal.aopdemo.Account;
@@ -10,7 +13,11 @@ public class AccountDAO {
 	private String name;
 	private String serviceCode;
 	
-
+	public List<Account> findAcounts(){
+		List<Account> theAccounts=new ArrayList<Account>();
+		return theAccounts;
+	}
+	
 	public void addAccount(Account theAccount,boolean vipFlag){
 		
 		System.out.println(getClass()+" :DOING MY DB WORK: ADDING AN ACCOUNT");
