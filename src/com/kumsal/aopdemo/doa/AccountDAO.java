@@ -10,15 +10,6 @@ public class AccountDAO {
 	private String name;
 	private String serviceCode;
 	
-	public AccountDAO() {
-		// TODO Auto-generated constructor stub
-	}
-	
-	public AccountDAO(String name, String serviceCode) {
-		super();
-		this.name = name;
-		this.serviceCode = serviceCode;
-	}
 
 	public void addAccount(Account theAccount,boolean vipFlag){
 		
