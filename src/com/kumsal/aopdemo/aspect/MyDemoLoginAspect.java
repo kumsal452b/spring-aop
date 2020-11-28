@@ -20,7 +20,7 @@ import jdk.nashorn.internal.objects.annotations.Setter;
 @Order(2)
 public class MyDemoLoginAspect {
 	
-	@AfterReturning(pointcut="execution(* com.kumsal.aopdemo.doa.findAccounts(..))",returning="result")
+	@AfterReturning(pointcut="execution(* com.kumsal.aopdemo.doa.AccountDAO.findAcounts(..))",returning="result")
 	public void afterReturningFindAccountService(
 			JoinPoint thePoint,
 			List<Account> result
@@ -30,6 +30,13 @@ public class MyDemoLoginAspect {
 		System.out.println("method =====> executing after run method "+method);
 		
 		System.out.println("Result is===> " +result);
+		
+		convertAccountNamesToUpperCase(result);
+		
+	}
+
+	private void convertAccountNamesToUpperCase(List<Account> result) {
+		
 		
 	}
 
