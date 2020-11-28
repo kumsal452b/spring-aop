@@ -1,5 +1,6 @@
 package com.kumsal.aopdemo;
 
+import java.util.List;
 import java.util.Scanner;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -14,20 +15,9 @@ public class AfterReturningDemoApp {
 				   new AnnotationConfigApplicationContext(DemoConfig.class);
 		
 		AccountDAO theAccountDao=context.getBean("accountDAO", AccountDAO.class);
+		List<Account> theAccounts=theAccountDao.findAcounts();
 		
-		MamberShipDAO theMemberShipDAO=context.getBean("mamberShipDAO",MamberShipDAO.class);
-		Account myAccount=new Account();
 		
-		myAccount.setName("Kumsal");
-		myAccount.setLevel("Platinium");
-		
-		theAccountDao.addAccount(myAccount,true);
-		theAccountDao.doWork();
-		theAccountDao.setName("foobar");
-		theAccountDao.setServiceCode("silver");
-		
-		theMemberShipDAO.addAccount();
-		theMemberShipDAO.addAccount();
 		context.close();
 	}
 
