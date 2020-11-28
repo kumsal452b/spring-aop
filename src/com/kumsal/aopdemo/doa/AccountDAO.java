@@ -10,6 +10,10 @@ public class AccountDAO {
 	private String name;
 	private String serviceCode;
 	
+	public AccountDAO() {
+		// TODO Auto-generated constructor stub
+	}
+	
 	public void addAccount(Account theAccount,boolean vipFlag){
 		
 		System.out.println(getClass()+" :DOING MY DB WORK: ADDING AN ACCOUNT");
