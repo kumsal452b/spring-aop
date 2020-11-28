@@ -18,7 +18,7 @@ public class AfterReturningDemoApp {
 		List<Account> theAccounts=theAccountDao.findAcounts();
 		
 		System.out.println("Main progaram afterReturning");
-		System.out.println(theAccountDao);
+		System.out.println(theAccounts);
 		System.out.println("end of list ");
 		
 		context.close();
