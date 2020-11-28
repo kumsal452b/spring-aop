@@ -14,6 +14,12 @@ public class AccountDAO {
 		// TODO Auto-generated constructor stub
 	}
 	
+	public AccountDAO(String name, String serviceCode) {
+		super();
+		this.name = name;
+		this.serviceCode = serviceCode;
+	}
+
 	public void addAccount(Account theAccount,boolean vipFlag){
 		
 		System.out.println(getClass()+" :DOING MY DB WORK: ADDING AN ACCOUNT");
@@ -38,6 +44,11 @@ public class AccountDAO {
 	public void setServiceCode(String serviceCode) {
 		this.serviceCode = serviceCode;
 		System.out.println(getClass()+" setservice gt:doing work");
+	}
+
+	@Override
+	public String toString() {
+		return "AccountDAO [name=" + name + ", serviceCode=" + serviceCode + "]";
 	}
 	
 }
