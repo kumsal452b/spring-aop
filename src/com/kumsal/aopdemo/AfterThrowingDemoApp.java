@@ -18,7 +18,8 @@ public class AfterThrowingDemoApp {
 		List<Account> theAccounts=null;
 		
 		try {
-			theAccounts=theAccountDao.findAcounts();
+			boolean tripWire=true;
+			theAccounts=theAccountDao.findAcounts(tripWire);
 		} catch (Exception e) {
 			System.out.println("Main Program caught exception :"+e);
 		}
