@@ -15,9 +15,15 @@ public class AfterThrowingDemoApp {
 				   new AnnotationConfigApplicationContext(DemoConfig.class);
 		
 		AccountDAO theAccountDao=context.getBean("accountDAO", AccountDAO.class);
-		List<Account> theAccounts=theAccountDao.findAcounts();
+		List<Account> theAccounts=null;
 		
-		System.out.println("Main progaram afterReturning");
+		try {
+			theAccountDao.findAcounts();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+		System.out.println("Main progaram afterThrowing");
 		System.out.println(theAccounts);
 		System.out.println("end of list ");
 		
