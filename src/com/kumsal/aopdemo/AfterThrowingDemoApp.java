@@ -18,9 +18,9 @@ public class AfterThrowingDemoApp {
 		List<Account> theAccounts=null;
 		
 		try {
-			theAccountDao.findAcounts();
+			theAccounts=theAccountDao.findAcounts();
 		} catch (Exception e) {
-			// TODO: handle exception
+			System.out.println("Main Program caught exception :"+e);
 		}
 		
 		System.out.println("Main progaram afterThrowing");
