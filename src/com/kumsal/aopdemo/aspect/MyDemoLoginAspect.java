@@ -22,6 +22,11 @@ import jdk.nashorn.internal.objects.annotations.Setter;
 @Order(2)
 public class MyDemoLoginAspect {
 	
+	@Aspect("execution(* com.kumsal.aopdemo.doa.AccountDAO.findAcounts(..))")
+	public void afterFinalyFindAccountAdvice(JoinPoint jPoint){
+		
+	}
+	
 	@AfterThrowing(
 			pointcut="execution(* com.kumsal.aopdemo.doa.AccountDAO.findAcounts(..))",
 			throwing="theExc"
