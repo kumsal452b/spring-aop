@@ -4,12 +4,14 @@ import java.util.List;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
+import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
+import org.springframework.ui.context.Theme;
 
 import com.kumsal.aopdemo.Account;
 
@@ -19,6 +21,19 @@ import jdk.nashorn.internal.objects.annotations.Setter;
 @Component
 @Order(2)
 public class MyDemoLoginAspect {
+	
+	@AfterThrowing(
+			pointcut="execution(* com.kumsal.aopdemo.doa.AccountDAO.findAcounts(..))",
+			throwing="theExc"
+			)
+	public void afterThrowingFindAccountAdvice(JoinPoint  theJp,Throwable theExc){
+		String method=theJp.getSignature().toShortString();
+		
+		System.out.println("method =====> executing afterThrowing run method "+method);
+		
+
+		
+	}
 	
 	@AfterReturning(pointcut="execution(* com.kumsal.aopdemo.doa.AccountDAO.findAcounts(..))",returning="result")
 	public void afterReturningFindAccountService(
