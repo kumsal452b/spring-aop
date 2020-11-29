@@ -31,7 +31,7 @@ public class MyDemoLoginAspect {
 		
 		System.out.println("method =====> executing afterThrowing run method "+method);
 		
-
+		System.out.println("method =====> The expcetion:  "+theExc);
 		
 	}
 	
