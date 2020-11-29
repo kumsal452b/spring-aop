@@ -3,6 +3,7 @@ package com.kumsal.aopdemo.aspect;
 import java.util.List;
 
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
@@ -22,9 +23,11 @@ import jdk.nashorn.internal.objects.annotations.Setter;
 @Order(2)
 public class MyDemoLoginAspect {
 	
-	@Aspect("execution(* com.kumsal.aopdemo.doa.AccountDAO.findAcounts(..))")
+	@After("execution(* com.kumsal.aopdemo.doa.AccountDAO.findAcounts(..))")
 	public void afterFinalyFindAccountAdvice(JoinPoint jPoint){
+		String method=jPoint.getSignature().toShortString();
 		
+		System.out.println("method =====> executing after finaly run method "+method);
 	}
 	
 	@AfterThrowing(
