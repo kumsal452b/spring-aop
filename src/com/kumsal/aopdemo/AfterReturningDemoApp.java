@@ -15,7 +15,7 @@ public class AfterReturningDemoApp {
 				   new AnnotationConfigApplicationContext(DemoConfig.class);
 		
 		AccountDAO theAccountDao=context.getBean("accountDAO", AccountDAO.class);
-		List<Account> theAccounts=theAccountDao.findAcounts();
+		List<Account> theAccounts=theAccountDao.findAcounts(false);
 		
 		System.out.println("Main progaram afterReturning");
 		System.out.println(theAccounts);
