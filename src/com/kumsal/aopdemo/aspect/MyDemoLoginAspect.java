@@ -32,8 +32,11 @@ public class MyDemoLoginAspect {
 		String method=theProccedingJoinPoint.getSignature().toShortString();
 		
 		System.out.println("method =====> executing Around run method "+method);
-		long time=System.currentTimeMillis();
+		long begin=System.currentTimeMillis();
 		
+		Object result=theProccedingJoinPoint.proceed();
+		
+		long end=System.currentTimeMillis();
 		
 		return theProccedingJoinPoint;
 		
