@@ -11,13 +11,17 @@ import com.kumsal.aopdemo.service.TrafficFortuneService;
 
 public class ArroundDemoApp {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		AnnotationConfigApplicationContext context = 
 				   new AnnotationConfigApplicationContext(DemoConfig.class);
 		
 		
 		TrafficFortuneService thTrafficFortuneService=context.getBean("accountDAO", TrafficFortuneService.class);
-		
+		System.out.println("Main demo app");
+		System.out.println("Calling fortune...");
+		String data=thTrafficFortuneService.getFortune();
+		System.out.println("My fortne is :"+data);
+		System.out.println("Finished");
 		context.close();
 	}
 
