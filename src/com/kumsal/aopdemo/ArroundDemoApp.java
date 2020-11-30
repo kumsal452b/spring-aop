@@ -15,18 +15,6 @@ public class ArroundDemoApp {
 				   new AnnotationConfigApplicationContext(DemoConfig.class);
 		
 		AccountDAO theAccountDao=context.getBean("accountDAO", AccountDAO.class);
-		List<Account> theAccounts=null;
-		
-		try {
-			boolean tripWire=false;
-			theAccounts=theAccountDao.findAcounts(tripWire);
-		} catch (Exception e) {
-			System.out.println("Main Program caught exception :"+e);
-		}
-		
-		System.out.println("Main progaram afterThrowing");
-		System.out.println(theAccounts);
-		System.out.println("end of list ");
 		
 		context.close();
 	}
