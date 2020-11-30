@@ -16,7 +16,7 @@ public class ArroundDemoApp {
 				   new AnnotationConfigApplicationContext(DemoConfig.class);
 		
 		
-		TrafficFortuneService thTrafficFortuneService=context.getBean("accountDAO", TrafficFortuneService.class);
+		TrafficFortuneService thTrafficFortuneService=context.getBean("trafficFortuneService", TrafficFortuneService.class);
 		System.out.println("Main demo app");
 		System.out.println("Calling fortune...");
 		String data=thTrafficFortuneService.getFortune();
