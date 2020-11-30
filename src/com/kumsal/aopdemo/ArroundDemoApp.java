@@ -7,6 +7,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 import com.kumsal.aopdemo.doa.AccountDAO;
 import com.kumsal.aopdemo.doa.MamberShipDAO;
+import com.kumsal.aopdemo.service.TrafficFortuneService;
 
 public class ArroundDemoApp {
 
@@ -14,7 +15,8 @@ public class ArroundDemoApp {
 		AnnotationConfigApplicationContext context = 
 				   new AnnotationConfigApplicationContext(DemoConfig.class);
 		
-		AccountDAO theAccountDao=context.getBean("accountDAO", AccountDAO.class);
+		
+		TrafficFortuneService thTrafficFortuneService=context.getBean("accountDAO", TrafficFortuneService.class);
 		
 		context.close();
 	}
