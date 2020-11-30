@@ -29,7 +29,12 @@ public class MyDemoLoginAspect {
 	@Around("execution(* com.kumsal.aopdemo.service.*.getFortune(..))")
 	public Object arroundGetFortune(ProceedingJoinPoint theProccedingJoinPoint) throws Throwable{
 		
-				
+		String method=theProccedingJoinPoint.getSignature().toShortString();
+		
+		System.out.println("method =====> executing Around run method "+method);
+		long time=System.currentTimeMillis();
+		
+		
 		return theProccedingJoinPoint;
 		
 	}
