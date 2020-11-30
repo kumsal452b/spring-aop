@@ -38,6 +38,9 @@ public class MyDemoLoginAspect {
 		
 		long end=System.currentTimeMillis();
 		
+		long duration=end-begin;
+		
+		
 		return theProccedingJoinPoint;
 		
 	}
