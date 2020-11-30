@@ -40,8 +40,9 @@ public class MyDemoLoginAspect {
 		
 		long duration=end-begin;
 		
+		System.out.println("======? "+duration/1000.0+" seccond");
 		
-		return theProccedingJoinPoint;
+		return result;
 		
 	}
 	
