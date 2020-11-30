@@ -10,6 +10,7 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
+import org.aspectj.lang.ProceedingJoinPoint;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 import org.springframework.ui.context.Theme;
@@ -22,6 +23,14 @@ import jdk.nashorn.internal.objects.annotations.Setter;
 @Component
 @Order(2)
 public class MyDemoLoginAspect {
+	
+	
+	public Object arroundGetFortune(ProceedingJoinPoint theProccedingJoinPoint) throws Throwable{
+		
+				
+		return theProccedingJoinPoint;
+		
+	}
 	
 	@After("execution(* com.kumsal.aopdemo.doa.AccountDAO.findAcounts(..))")
 	public void afterFinalyFindAccountAdvice(JoinPoint jPoint){
