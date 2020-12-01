@@ -15,20 +15,19 @@ import com.sun.istack.internal.logging.Logger;
 public class ArroundWithLoggerDemoApp {
 
 
-	private static Logger myLogger=Logger.getLogger(ArroundWithLoggerDemoApp.class.getName())
-			;
+	private static Logger myLogger=Logger.getLogger(ArroundWithLoggerDemoApp.class.getName());
 	public static void main(String[] args) throws InterruptedException {
 		AnnotationConfigApplicationContext context = 
 				   new AnnotationConfigApplicationContext(DemoConfig.class);
 		
 		
 		TrafficFortuneService thTrafficFortuneService=context.getBean("trafficFortuneService", TrafficFortuneService.class);
-		System.out.println("Main demo app");
-		System.out.println("Calling fortune...");
+		myLogger.info("Main demo app");
+		myLogger.info("Calling fortune...");
 
 		String data=thTrafficFortuneService.getFortune();
-		System.out.println("My fortne is :"+data);
-		System.out.println("Finished");
+		myLogger.info("My fortne is :"+data);
+		myLogger.info("Finished");
 		context.close();
 	}
 
