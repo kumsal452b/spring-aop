@@ -11,13 +11,13 @@ public class TrafficFortuneService {
 		TimeUnit.SECONDS.sleep(5);
 	
 		
-		return "Expect heavy this morning";
+		return "Expect heavy traffic this morning";
 	}
 
-	public String getFortune(boolean tripWire) {
+	public String getFortune(boolean tripWire) throws InterruptedException {
 		if (tripWire) {
 			throw new RuntimeException("Major accident! Highway is closed");
 		}
-		return null;
+		return getFortune();
 	}
 }

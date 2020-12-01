@@ -28,6 +28,8 @@ public class MyDemoLoginAspect {
 	
 	private Logger myLogger=Logger.getLogger(getClass().getName());
 	
+	
+	
 	@Around("execution(* com.kumsal.aopdemo.service.*.getFortune(..))")
 	public Object arroundGetFortune(ProceedingJoinPoint theProccedingJoinPoint) throws Throwable{
 		
@@ -36,7 +38,13 @@ public class MyDemoLoginAspect {
 		myLogger.info("method =====> executing Around run method "+method);
 		long begin=System.currentTimeMillis();
 		
-		Object result=theProccedingJoinPoint.proceed();
+		Object result=null;
+		try {
+			result=theProccedingJoinPoint.proceed();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		long end=System.currentTimeMillis();
 		
