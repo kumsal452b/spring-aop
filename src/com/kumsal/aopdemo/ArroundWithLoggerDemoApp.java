@@ -11,9 +11,8 @@ import com.kumsal.aopdemo.doa.AccountDAO;
 import com.kumsal.aopdemo.doa.MamberShipDAO;
 import com.kumsal.aopdemo.service.TrafficFortuneService;
 
-public class ArroundDemoApp {
+public class ArroundWithLoggerDemoApp {
 
-	
 	public static void main(String[] args) throws InterruptedException {
 		AnnotationConfigApplicationContext context = 
 				   new AnnotationConfigApplicationContext(DemoConfig.class);
