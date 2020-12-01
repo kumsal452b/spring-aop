@@ -10,9 +10,13 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import com.kumsal.aopdemo.doa.AccountDAO;
 import com.kumsal.aopdemo.doa.MamberShipDAO;
 import com.kumsal.aopdemo.service.TrafficFortuneService;
+import com.sun.istack.internal.logging.Logger;
 
 public class ArroundWithLoggerDemoApp {
 
+
+	private static Logger myLogger=Logger.getLogger(ArroundWithLoggerDemoApp.class.getName())
+			;
 	public static void main(String[] args) throws InterruptedException {
 		AnnotationConfigApplicationContext context = 
 				   new AnnotationConfigApplicationContext(DemoConfig.class);
