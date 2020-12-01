@@ -25,7 +25,8 @@ public class ArroundHandleExpcetionDemoApp {
 		myLogger.info("Main demo app");
 		myLogger.info("Calling fortune...");
 
-		String data=thTrafficFortuneService.getFortune();
+		boolean tripWire=true;
+		String data=thTrafficFortuneService.getFortune(tripWire);
 		myLogger.info("My fortne is :"+data);
 		myLogger.info("Finished");
 		context.close();

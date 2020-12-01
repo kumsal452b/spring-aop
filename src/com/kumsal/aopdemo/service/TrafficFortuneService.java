@@ -13,4 +13,11 @@ public class TrafficFortuneService {
 		
 		return "Expect heavy this morning";
 	}
+
+	public String getFortune(boolean tripWire) {
+		if (tripWire) {
+			throw new RuntimeException("Major accident! Highway is closed");
+		}
+		return null;
+	}
 }
