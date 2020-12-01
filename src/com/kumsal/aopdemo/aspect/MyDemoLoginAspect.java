@@ -42,8 +42,8 @@ public class MyDemoLoginAspect {
 		try {
 			result=theProccedingJoinPoint.proceed();
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			myLogger.warning(e.getMessage());
+			result="Major Accident! But no worris, your private AOP helicopter is on the way";
 		}
 		
 		long end=System.currentTimeMillis();
